@@ -48,6 +48,9 @@ namespace GP_FootballLeage
             return _goalsFor - _goalsAgainst;
         }
 
-
+        public string Describe()
+        {
+            return $"{_name}: {_points} pont, {_goalsFor}-{_goalsAgainst}";
+        }
     }
 }
