@@ -39,5 +39,16 @@ namespace GP_FootballLeage
             return true;
         }
 
+        public int UnplayedCount()
+        {
+            return _matches.Where(x => x.IsPlayed == false).Count();
+        }
+
+        public Team Leader()
+        {
+            
+            return _teams.OrderByDescending(x => x.Points).ThenByDescending(x=>x.GoalDifference()).First();
+        }
+
     }
 }
