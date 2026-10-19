@@ -49,5 +49,32 @@ namespace GP_FootballLeage
             _isPlayed = false;
         }
 
+
+
+        public bool Play(int homeGoals, int awayGoals)
+        {
+            if (_isPlayed || homeGoals < 0 || awayGoals < 0)
+            {
+                return false;
+            }
+            _homeGoals = homeGoals;
+            _awayGoals = awayGoals;
+            _isPlayed = true;
+            _home.AddResult(homeGoals, awayGoals);
+            _away.AddResult(awayGoals, homeGoals);
+            return true;
+
+        }
+        public string Describe()
+        {
+            if (_isPlayed)
+            {
+                return $"{_home.Name} - {_away.Name} {_homeGoals}:{_awayGoals}";
+            }
+            else
+            {
+                return $"{_home.Name} - {_away.Name} (még nem játszották)";
+            }
+        }
     }
 }
