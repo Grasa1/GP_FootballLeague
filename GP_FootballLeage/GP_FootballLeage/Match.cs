@@ -65,5 +65,16 @@ namespace GP_FootballLeage
             return true;
 
         }
+        public string Describe()
+        {
+            if (_isPlayed)
+            {
+                return $"{_home.Name} - {_away.Name} {_homeGoals}:{_awayGoals}";
+            }
+            else
+            {
+                return $"{_home.Name} - {_away.Name} (még nem játszották)";
+            }
+        }
     }
 }
