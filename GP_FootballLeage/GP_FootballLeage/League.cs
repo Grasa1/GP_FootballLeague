@@ -47,7 +47,7 @@ namespace GP_FootballLeage
         public Team Leader()
         {
             
-            return _teams.OrderByDescending(x => x.Points).ThenByDescending(x=>x.GoalDifference()).First();
+            return _teams.OrderByDescending(x => x.Points).ThenByDescending(x=>x.GoalDifference()).ToList().First();
         }
 
     }

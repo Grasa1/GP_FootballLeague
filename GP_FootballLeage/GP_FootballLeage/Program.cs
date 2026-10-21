@@ -27,7 +27,7 @@
             Console.WriteLine(league.Matches[1].Describe());
             Console.WriteLine(league.Matches[2].Describe());
 
-            Console.WriteLine(league.Leader());
+            Console.WriteLine(league.Leader().Describe());
             
             
 
